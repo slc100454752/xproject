@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 	@RequestMapping("xproject/")
-	public String index() {
+	public String index() { 
 		return "xproject";
 	}
 }
