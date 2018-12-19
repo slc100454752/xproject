@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.slc.XProject.entity.User;
-import com.slc.XProject.service.IUserService;
+import com.slc.XProject.entity.Player;
+import com.slc.XProject.service.IQueryService;
+import com.slc.XProject.utils.HttpUtils;
 
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -17,20 +18,21 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 @RestController
-@RequestMapping("xproject/")
-public class IndexController {
+@RequestMapping("chijiquery/")
+public class QueryController {
 	protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	private @Autowired IUserService userService;
+	private @Autowired IQueryService queryService;
 
-	@RequestMapping("test")
-	public String test() {
+	@RequestMapping("queryByName")
+	public String queryByName(String name) {
 		try {
-			logger.info("test");
-			User user = new User();
-			user.setLoginMobile("15527770352");
-			user.setPassword("asdasd");
-			userService.insertUser(user);
+			// 查询的时候先查库里有没有，如果没有 ，请求蓝洞，入库，如果有，检查这个用户的战绩是否有更新，如果有 入库，如果没有，啥都不做
+			Player p=queryService.selectPlayerByName(name);
+			if(p==null) {
+				//HttpUtils.sendHttp(url)
+			}
+			
 		} catch (Exception e) {
 			logger.error("异常{}",e);
 		}
@@ -38,11 +40,6 @@ public class IndexController {
 		return "xproject";
 	}
 
-	@RequestMapping("test1")
-	public String test1() {
-		
-		return userService.selectUserByLoginMobile("15527770352").toString();
-	}
 	public static void main(String[] args) {
 		/**
 		 * String key="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlMTdiMWJjMC1lNTgzLTAxMzYtOGM5Mi0zYmRiNzM0ZmMxZDEiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNTQ1MjAwMzMyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImNoaWppcXVlcnkifQ.baoIf1m_hsYLWQpMEjK2L14FnJCNnezUhivDV-ExlHw";
