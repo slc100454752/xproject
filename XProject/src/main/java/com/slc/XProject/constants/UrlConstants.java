@@ -7,13 +7,12 @@ public class UrlConstants {
 	/**
 	 * 获取玩家姓名、id及近10场游戏记录id
 	 */
-	private String queryPlayerAndmatches = String
-			.format("https://api.pubg.com/shards/steam/players?filter[playerNames]=%s", name);
+	private String queryPlayerAndmatches;
 	/**
 	 * 查询玩家各项游戏指数
 	 */
-	private String queryPlayerValues = String.format("https://api.pubg.com/shards/steam/players/%s/seasons/lifetime",
-			playerId);
+	private String queryPlayerValues ;
+	
 	public String getName() {
 		return name;
 	}
@@ -27,17 +26,16 @@ public class UrlConstants {
 		this.playerId = playerId;
 	}
 	public String getQueryPlayerAndmatches() {
+		queryPlayerAndmatches=String
+				.format("https://api.pubg.com/shards/steam/players?filter[playerNames]=%s", name);
 		return queryPlayerAndmatches;
 	}
-	public void setQueryPlayerAndmatches(String queryPlayerAndmatches) {
-		this.queryPlayerAndmatches = queryPlayerAndmatches;
-	}
+	
 	public String getQueryPlayerValues() {
+		queryPlayerValues= String.format("https://api.pubg.com/shards/steam/players/%s/seasons/lifetime",
+				playerId);
 		return queryPlayerValues;
 	}
-	public void setQueryPlayerValues(String queryPlayerValues) {
-		this.queryPlayerValues = queryPlayerValues;
-	}
-
+	
 	
 }

@@ -4,50 +4,97 @@ public class PlayerValues {
 	private Long id;
 	private String name;
 
-	private String assists;// 助攻,
-	private String bestRankPoint;// 最高分,
-	private String boosts;// 使用的增强数
 
-	private String dailyKills;// 4,
-	private String dailyWins;// 0,
-	private String damageDealt;// 造成的总伤害。注意：减去自己造成的伤害 45257.99,
-	private String days;// 26,
-	private String headshotKills;// 爆头 67,
-	private String heals;// 使用的治疗项目数 520,
-	// private String killPoints;// 0,
-	private String kills;// 杀敌数 338,
-	private String longestKill;// 最远击杀 360.57755,
-	private String longestTimeSurvived;// 最长生存时间 单位（秒） 2199.728,
-	private String losses;// 188,
-	private String maxKillStreaks;// 3,
-	private String mostSurvivalTime;// 最长生存时间 单位（秒） 2199.728,
-	private String rankPoints;// rank分 2202.5044,
+    private String playerId;
 
-	private String revives;// 救助队友次数 52,
-	private String rideDistance;// 驾驶载具行驶总距离单位（米） 318960.3,
-	private String roadKills;// 载具击杀 2,
-	private String roundMostKills;// 单场最多击杀 8,
-	private String roundsPlayed;// 206,
-	private String suicides;// 自杀次数 8,
-	private String swimDistance;// 游泳总距离 单位（米） 349.67148,
-	private String teamKills;// 击杀队友 8,
-	private String timeSurvived;// 生存总时长 单位（秒） 217347.97,
-	private String top10s;// 前十数 86,
-	private String vehicleDestroys;// 摧毁载具 5,
-	private String walkDistance;// 步行距离 单位（米） 291228.9,
-	private String weaponsAcquired;// 拾取武器 1129,
-	private String weeklyKills;// 上周击杀数 4,
-	private String weeklyWins;// 上周吃鸡数 0,
+    private Integer type;
 
-	private String wins;// 总吃鸡数 19
+    private double assists;
 
-	private String playerId;
+    private double bestRankPoint;
 
-	private Integer type;
+    private double boosts;
 
-	private String dBNOs;
+    private double dBNOs;
 
-	
+    private double damageDealt;
+
+    private double dailyKills;
+
+    private double dailyWins;
+
+    private double days;
+
+    private double headshotKills;
+
+    private double heals;
+
+    private double kills;
+
+    private double longestKill;
+
+    private double longestTimeSurvived;
+
+    private double losses;
+
+    private double maxKillStreaks;
+
+    private double mostSurvivalTime;
+
+    private double rankPoints;
+
+    private double revives;
+
+    private double rideDistance;
+
+    private double roadKills;
+
+    private double roundMostKills;
+
+    private double roundsPlayed;
+
+    private double suicides;
+
+    private double swimDistance;
+
+    private double teamKills;
+
+    private double timeSurvived;
+
+    private double top10s;
+
+    private double vehicleDestroys;
+
+    private double walkDistance;
+
+    private double weaponsAcquired;
+
+    private double weeklyKills;
+
+    private double weeklyWins;
+
+    private double wins;
+    
+    private int seasonsId;
+    
+    
+
+	public int getSeasonsId() {
+		return seasonsId;
+	}
+
+	public void setSeasonsId(int seasonsId) {
+		this.seasonsId = seasonsId;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -56,20 +103,12 @@ public class PlayerValues {
 		this.name = name;
 	}
 
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getPlayerId() {
 		return playerId;
 	}
 
 	public void setPlayerId(String playerId) {
-		this.playerId = playerId == null ? null : playerId.trim();
+		this.playerId = playerId;
 	}
 
 	public Integer getType() {
@@ -80,268 +119,271 @@ public class PlayerValues {
 		this.type = type;
 	}
 
-	public String getAssists() {
+	public double getAssists() {
 		return assists;
 	}
 
-	public void setAssists(String assists) {
-		this.assists = assists == null ? null : assists.trim();
+	public void setAssists(double assists) {
+		this.assists = assists;
 	}
 
-	public String getBestRankPoint() {
+	public double getBestRankPoint() {
 		return bestRankPoint;
 	}
 
-	public void setBestRankPoint(String bestRankPoint) {
-		this.bestRankPoint = bestRankPoint == null ? null : bestRankPoint.trim();
+	public void setBestRankPoint(double bestRankPoint) {
+		this.bestRankPoint = bestRankPoint;
 	}
 
-	public String getBoosts() {
+	public double getBoosts() {
 		return boosts;
 	}
 
-	public void setBoosts(String boosts) {
-		this.boosts = boosts == null ? null : boosts.trim();
+	public void setBoosts(double boosts) {
+		this.boosts = boosts;
 	}
 
-	
-	public String getdBNOs() {
+
+	public double getdBNOs() {
 		return dBNOs;
 	}
 
-	public void setdBNOs(String dBNOs) {
+	public void setdBNOs(double dBNOs) {
 		this.dBNOs = dBNOs;
 	}
 
-	public String getDamageDealt() {
+	public double getDamageDealt() {
 		return damageDealt;
 	}
 
-	public void setDamageDealt(String damageDealt) {
-		this.damageDealt = damageDealt == null ? null : damageDealt.trim();
+	public void setDamageDealt(double damageDealt) {
+		this.damageDealt = damageDealt;
 	}
 
-	public String getDailyKills() {
+	public double getDailyKills() {
 		return dailyKills;
 	}
 
-	public void setDailyKills(String dailyKills) {
-		this.dailyKills = dailyKills == null ? null : dailyKills.trim();
+	public void setDailyKills(double dailyKills) {
+		this.dailyKills = dailyKills;
 	}
 
-	public String getDailyWins() {
+	public double getDailyWins() {
 		return dailyWins;
 	}
 
-	public void setDailyWins(String dailyWins) {
-		this.dailyWins = dailyWins == null ? null : dailyWins.trim();
+	public void setDailyWins(double dailyWins) {
+		this.dailyWins = dailyWins;
 	}
 
-	public String getDays() {
+	public double getDays() {
 		return days;
 	}
 
-	public void setDays(String days) {
-		this.days = days == null ? null : days.trim();
+	public void setDays(double days) {
+		this.days = days;
 	}
 
-	public String getHeadshotKills() {
+	public double getHeadshotKills() {
 		return headshotKills;
 	}
 
-	public void setHeadshotKills(String headshotKills) {
-		this.headshotKills = headshotKills == null ? null : headshotKills.trim();
+	public void setHeadshotKills(double headshotKills) {
+		this.headshotKills = headshotKills;
 	}
 
-	public String getHeals() {
+	public double getHeals() {
 		return heals;
 	}
 
-	public void setHeals(String heals) {
-		this.heals = heals == null ? null : heals.trim();
+	public void setHeals(double heals) {
+		this.heals = heals;
 	}
 
-	public String getKills() {
+	public double getKills() {
 		return kills;
 	}
 
-	public void setKills(String kills) {
-		this.kills = kills == null ? null : kills.trim();
+	public void setKills(double kills) {
+		this.kills = kills;
 	}
 
-	public String getLongestKill() {
+	public double getLongestKill() {
 		return longestKill;
 	}
 
-	public void setLongestKill(String longestKill) {
-		this.longestKill = longestKill == null ? null : longestKill.trim();
+	public void setLongestKill(double longestKill) {
+		this.longestKill = longestKill;
 	}
 
-	public String getLongestTimeSurvived() {
+	public double getLongestTimeSurvived() {
 		return longestTimeSurvived;
 	}
 
-	public void setLongestTimeSurvived(String longestTimeSurvived) {
-		this.longestTimeSurvived = longestTimeSurvived == null ? null : longestTimeSurvived.trim();
+	public void setLongestTimeSurvived(double longestTimeSurvived) {
+		this.longestTimeSurvived = longestTimeSurvived;
 	}
 
-	public String getLosses() {
+	public double getLosses() {
 		return losses;
 	}
 
-	public void setLosses(String losses) {
-		this.losses = losses == null ? null : losses.trim();
+	public void setLosses(double losses) {
+		this.losses = losses;
 	}
 
-	public String getMaxKillStreaks() {
+	public double getMaxKillStreaks() {
 		return maxKillStreaks;
 	}
 
-	public void setMaxKillStreaks(String maxKillStreaks) {
-		this.maxKillStreaks = maxKillStreaks == null ? null : maxKillStreaks.trim();
+	public void setMaxKillStreaks(double maxKillStreaks) {
+		this.maxKillStreaks = maxKillStreaks;
 	}
 
-	public String getMostSurvivalTime() {
+	public double getMostSurvivalTime() {
 		return mostSurvivalTime;
 	}
 
-	public void setMostSurvivalTime(String mostSurvivalTime) {
-		this.mostSurvivalTime = mostSurvivalTime == null ? null : mostSurvivalTime.trim();
+	public void setMostSurvivalTime(double mostSurvivalTime) {
+		this.mostSurvivalTime = mostSurvivalTime;
 	}
 
-	public String getRankPoints() {
+	public double getRankPoints() {
 		return rankPoints;
 	}
 
-	public void setRankPoints(String rankPoints) {
-		this.rankPoints = rankPoints == null ? null : rankPoints.trim();
+	public void setRankPoints(double rankPoints) {
+		this.rankPoints = rankPoints;
 	}
 
-	public String getRevives() {
+	public double getRevives() {
 		return revives;
 	}
 
-	public void setRevives(String revives) {
-		this.revives = revives == null ? null : revives.trim();
+	public void setRevives(double revives) {
+		this.revives = revives;
 	}
 
-	public String getRideDistance() {
+	public double getRideDistance() {
 		return rideDistance;
 	}
 
-	public void setRideDistance(String rideDistance) {
-		this.rideDistance = rideDistance == null ? null : rideDistance.trim();
+	public void setRideDistance(double rideDistance) {
+		this.rideDistance = rideDistance;
 	}
 
-	public String getRoadKills() {
+	public double getRoadKills() {
 		return roadKills;
 	}
 
-	public void setRoadKills(String roadKills) {
-		this.roadKills = roadKills == null ? null : roadKills.trim();
+	public void setRoadKills(double roadKills) {
+		this.roadKills = roadKills;
 	}
 
-	public String getRoundMostKills() {
+	public double getRoundMostKills() {
 		return roundMostKills;
 	}
 
-	public void setRoundMostKills(String roundMostKills) {
-		this.roundMostKills = roundMostKills == null ? null : roundMostKills.trim();
+	public void setRoundMostKills(double roundMostKills) {
+		this.roundMostKills = roundMostKills;
 	}
 
-	public String getRoundsPlayed() {
+	public double getRoundsPlayed() {
 		return roundsPlayed;
 	}
 
-	public void setRoundsPlayed(String roundsPlayed) {
-		this.roundsPlayed = roundsPlayed == null ? null : roundsPlayed.trim();
+	public void setRoundsPlayed(double roundsPlayed) {
+		this.roundsPlayed = roundsPlayed;
 	}
 
-	public String getSuicides() {
+	public double getSuicides() {
 		return suicides;
 	}
 
-	public void setSuicides(String suicides) {
-		this.suicides = suicides == null ? null : suicides.trim();
+	public void setSuicides(double suicides) {
+		this.suicides = suicides;
 	}
 
-	public String getSwimDistance() {
+	public double getSwimDistance() {
 		return swimDistance;
 	}
 
-	public void setSwimDistance(String swimDistance) {
-		this.swimDistance = swimDistance == null ? null : swimDistance.trim();
+	public void setSwimDistance(double swimDistance) {
+		this.swimDistance = swimDistance;
 	}
 
-	public String getTeamKills() {
+	public double getTeamKills() {
 		return teamKills;
 	}
 
-	public void setTeamKills(String teamKills) {
-		this.teamKills = teamKills == null ? null : teamKills.trim();
+	public void setTeamKills(double teamKills) {
+		this.teamKills = teamKills;
 	}
 
-	public String getTimeSurvived() {
+	public double getTimeSurvived() {
 		return timeSurvived;
 	}
 
-	public void setTimeSurvived(String timeSurvived) {
-		this.timeSurvived = timeSurvived == null ? null : timeSurvived.trim();
+	public void setTimeSurvived(double timeSurvived) {
+		this.timeSurvived = timeSurvived;
 	}
 
-	public String getTop10s() {
+	public double getTop10s() {
 		return top10s;
 	}
 
-	public void setTop10s(String top10s) {
-		this.top10s = top10s == null ? null : top10s.trim();
+	public void setTop10s(double top10s) {
+		this.top10s = top10s;
 	}
 
-	public String getVehicleDestroys() {
+	public double getVehicleDestroys() {
 		return vehicleDestroys;
 	}
 
-	public void setVehicleDestroys(String vehicleDestroys) {
-		this.vehicleDestroys = vehicleDestroys == null ? null : vehicleDestroys.trim();
+	public void setVehicleDestroys(double vehicleDestroys) {
+		this.vehicleDestroys = vehicleDestroys;
 	}
 
-	public String getWalkDistance() {
+	public double getWalkDistance() {
 		return walkDistance;
 	}
 
-	public void setWalkDistance(String walkDistance) {
-		this.walkDistance = walkDistance == null ? null : walkDistance.trim();
+	public void setWalkDistance(double walkDistance) {
+		this.walkDistance = walkDistance;
 	}
 
-	public String getWeaponsAcquired() {
+	public double getWeaponsAcquired() {
 		return weaponsAcquired;
 	}
 
-	public void setWeaponsAcquired(String weaponsAcquired) {
-		this.weaponsAcquired = weaponsAcquired == null ? null : weaponsAcquired.trim();
+	public void setWeaponsAcquired(double weaponsAcquired) {
+		this.weaponsAcquired = weaponsAcquired;
 	}
 
-	public String getWeeklyKills() {
+	public double getWeeklyKills() {
 		return weeklyKills;
 	}
 
-	public void setWeeklyKills(String weeklyKills) {
-		this.weeklyKills = weeklyKills == null ? null : weeklyKills.trim();
+	public void setWeeklyKills(double weeklyKills) {
+		this.weeklyKills = weeklyKills;
 	}
 
-	public String getWeeklyWins() {
+	public double getWeeklyWins() {
 		return weeklyWins;
 	}
 
-	public void setWeeklyWins(String weeklyWins) {
-		this.weeklyWins = weeklyWins == null ? null : weeklyWins.trim();
+	public void setWeeklyWins(double weeklyWins) {
+		this.weeklyWins = weeklyWins;
 	}
 
-	public String getWins() {
+	public double getWins() {
 		return wins;
 	}
 
-	public void setWins(String wins) {
-		this.wins = wins == null ? null : wins.trim();
+	public void setWins(double wins) {
+		this.wins = wins;
 	}
+
+    
+   
 }

@@ -9,4 +9,10 @@ public interface IQueryService {
 	int insertPlayerValues(PlayerValues player);
 
 	Player selectPlayerByName(String name);
+	
+	PlayerValues selectByIdAndType(String playerId,int type);
+	
+	int updateValues(PlayerValues player);
+	
+	PlayerValues selectByPlayerId(String playerId);
 }

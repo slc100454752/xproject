@@ -37,5 +37,23 @@ public class QueryServiceImpl implements IQueryService {
 		
 		return playerMapper.selectByName(name);
 	}
+
+	@Override
+	public PlayerValues selectByIdAndType(String playerId, int type) {
+		
+		return playerValuesMapper.selectByIdAndType(playerId, type);
+	}
+
+	@Override
+	public int updateValues(PlayerValues player) {
+		
+		return playerValuesMapper.updateByPrimaryKeySelective(player);
+	}
+
+	@Override
+	public PlayerValues selectByPlayerId(String playerId) {
+		
+		return playerValuesMapper.selectByPlayerId(playerId);
+	}
 	
 }

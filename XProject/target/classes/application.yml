@@ -1,10 +1,17 @@
 server:
   port: 8001
-
+  #ssl:
+  #  protocol: TLS
+  #  key-store: classpath:keystore.p12
+  #  key-store-password: 'slc961031!'
+  #  keyStoreType: PKCS12
+  #  keyAlias: tomcat
+    
 spring:
   thymeleaf:
     cache: true
-    
+   
+ 
   devtools:
     restart:
       enabled: true
@@ -16,10 +23,10 @@ spring:
     active: dev
 
   datasource:
-    url: jdbc:mysql://192.168.0.14:3306/Xproject?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false
+    url: jdbc:mysql://localhost:3306/Xproject?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
 
-    username: admin
-    password: slc961031
+    username: chiji
+    password: '!QAZ2wsx'
     driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource

@@ -10,7 +10,7 @@ public class PlayerValuesSqlProvider {
         SQL sql = new SQL();
         sql.INSERT_INTO("player_values");
         
-        if (record.getId() != null) {
+        if (record.getId() != 0) {
             sql.VALUES("id", "#{id,jdbcType=BIGINT}");
         }
         
@@ -18,139 +18,139 @@ public class PlayerValuesSqlProvider {
             sql.VALUES("player_id", "#{playerId,jdbcType=VARCHAR}");
         }
         
-        if (record.getType() != null) {
+        if (record.getType() != 0) {
             sql.VALUES("type", "#{type,jdbcType=INTEGER}");
         }
         
-        if (record.getAssists() != null) {
+        if (record.getAssists() != 0) {
             sql.VALUES("assists", "#{assists,jdbcType=VARCHAR}");
         }
         
-        if (record.getBestRankPoint() != null) {
+        if (record.getBestRankPoint() != 0) {
             sql.VALUES("best_rank_point", "#{bestRankPoint,jdbcType=VARCHAR}");
         }
         
-        if (record.getBoosts() != null) {
+        if (record.getBoosts() != 0) {
             sql.VALUES("boosts", "#{boosts,jdbcType=VARCHAR}");
         }
         
-        if (record.getdBNOs() != null) {
-            sql.VALUES("dBNOs", "#{dbnos,jdbcType=VARCHAR}");
+        if (record.getdBNOs() != 0) {
+            sql.VALUES("dBNOs", "#{dBNOs,jdbcType=VARCHAR}");
         }
         
-        if (record.getDamageDealt() != null) {
+        if (record.getDamageDealt() != 0) {
             sql.VALUES("damage_dealt", "#{damageDealt,jdbcType=VARCHAR}");
         }
         
-        if (record.getDailyKills() != null) {
+        if (record.getDailyKills() != 0) {
             sql.VALUES("daily_kills", "#{dailyKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getDailyWins() != null) {
+        if (record.getDailyWins() != 0) {
             sql.VALUES("daily_wins", "#{dailyWins,jdbcType=VARCHAR}");
         }
         
-        if (record.getDays() != null) {
+        if (record.getDays() != 0) {
             sql.VALUES("days", "#{days,jdbcType=VARCHAR}");
         }
         
-        if (record.getHeadshotKills() != null) {
+        if (record.getHeadshotKills() != 0) {
             sql.VALUES("headshot_kills", "#{headshotKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getHeals() != null) {
+        if (record.getHeals() != 0) {
             sql.VALUES("heals", "#{heals,jdbcType=VARCHAR}");
         }
         
-        if (record.getKills() != null) {
+        if (record.getKills() != 0) {
             sql.VALUES("kills", "#{kills,jdbcType=VARCHAR}");
         }
         
-        if (record.getLongestKill() != null) {
+        if (record.getLongestKill() != 0) {
             sql.VALUES("longest_kill", "#{longestKill,jdbcType=VARCHAR}");
         }
         
-        if (record.getLongestTimeSurvived() != null) {
+        if (record.getLongestTimeSurvived() != 0) {
             sql.VALUES("longest_time_survived", "#{longestTimeSurvived,jdbcType=VARCHAR}");
         }
         
-        if (record.getLosses() != null) {
+        if (record.getLosses() != 0) {
             sql.VALUES("losses", "#{losses,jdbcType=VARCHAR}");
         }
         
-        if (record.getMaxKillStreaks() != null) {
+        if (record.getMaxKillStreaks() != 0) {
             sql.VALUES("max_kill_streaks", "#{maxKillStreaks,jdbcType=VARCHAR}");
         }
         
-        if (record.getMostSurvivalTime() != null) {
+        if (record.getMostSurvivalTime() != 0) {
             sql.VALUES("most_survival_time", "#{mostSurvivalTime,jdbcType=VARCHAR}");
         }
         
-        if (record.getRankPoints() != null) {
+        if (record.getRankPoints() != 0) {
             sql.VALUES("rank_points", "#{rankPoints,jdbcType=VARCHAR}");
         }
         
-        if (record.getRevives() != null) {
+        if (record.getRevives() != 0) {
             sql.VALUES("revives", "#{revives,jdbcType=VARCHAR}");
         }
         
-        if (record.getRideDistance() != null) {
+        if (record.getRideDistance() != 0) {
             sql.VALUES("ride_distance", "#{rideDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoadKills() != null) {
+        if (record.getRoadKills() != 0) {
             sql.VALUES("road_kills", "#{roadKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoundMostKills() != null) {
+        if (record.getRoundMostKills() != 0) {
             sql.VALUES("round_most_kills", "#{roundMostKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoundsPlayed() != null) {
+        if (record.getRoundsPlayed() != 0) {
             sql.VALUES("rounds_played", "#{roundsPlayed,jdbcType=VARCHAR}");
         }
         
-        if (record.getSuicides() != null) {
+        if (record.getSuicides() != 0) {
             sql.VALUES("suicides", "#{suicides,jdbcType=VARCHAR}");
         }
         
-        if (record.getSwimDistance() != null) {
+        if (record.getSwimDistance() != 0) {
             sql.VALUES("swim_distance", "#{swimDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getTeamKills() != null) {
+        if (record.getTeamKills() != 0) {
             sql.VALUES("team_kills", "#{teamKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getTimeSurvived() != null) {
+        if (record.getTimeSurvived() != 0) {
             sql.VALUES("time_survived", "#{timeSurvived,jdbcType=VARCHAR}");
         }
         
-        if (record.getTop10s() != null) {
+        if (record.getTop10s() != 0) {
             sql.VALUES("top10s", "#{top10s,jdbcType=VARCHAR}");
         }
         
-        if (record.getVehicleDestroys() != null) {
+        if (record.getVehicleDestroys() != 0) {
             sql.VALUES("vehicle_destroys", "#{vehicleDestroys,jdbcType=VARCHAR}");
         }
         
-        if (record.getWalkDistance() != null) {
+        if (record.getWalkDistance() != 0) {
             sql.VALUES("walk_distance", "#{walkDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeaponsAcquired() != null) {
+        if (record.getWeaponsAcquired() != 0) {
             sql.VALUES("weapons_acquired", "#{weaponsAcquired,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeeklyKills() != null) {
+        if (record.getWeeklyKills() != 0) {
             sql.VALUES("weekly_kills", "#{weeklyKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeeklyWins() != null) {
+        if (record.getWeeklyWins() != 0) {
             sql.VALUES("weekly_wins", "#{weeklyWins,jdbcType=VARCHAR}");
         }
         
-        if (record.getWins() != null) {
+        if (record.getWins() != 0) {
             sql.VALUES("wins", "#{wins,jdbcType=VARCHAR}");
         }
         
@@ -165,139 +165,139 @@ public class PlayerValuesSqlProvider {
             sql.SET("player_id = #{playerId,jdbcType=VARCHAR}");
         }
         
-        if (record.getType() != null) {
+        if (record.getType() != 0) {
             sql.SET("type = #{type,jdbcType=INTEGER}");
         }
         
-        if (record.getAssists() != null) {
+        if (record.getAssists() != 0) {
             sql.SET("assists = #{assists,jdbcType=VARCHAR}");
         }
         
-        if (record.getBestRankPoint() != null) {
+        if (record.getBestRankPoint() != 0) {
             sql.SET("best_rank_point = #{bestRankPoint,jdbcType=VARCHAR}");
         }
         
-        if (record.getBoosts() != null) {
+        if (record.getBoosts() != 0) {
             sql.SET("boosts = #{boosts,jdbcType=VARCHAR}");
         }
         
-        if (record.getdBNOs() != null) {
-            sql.SET("dBNOs = #{dbnos,jdbcType=VARCHAR}");
+        if (record.getdBNOs() != 0) {
+            sql.SET("dBNOs = #{dBNOs,jdbcType=VARCHAR}");
         }
         
-        if (record.getDamageDealt() != null) {
+        if (record.getDamageDealt() != 0) {
             sql.SET("damage_dealt = #{damageDealt,jdbcType=VARCHAR}");
         }
         
-        if (record.getDailyKills() != null) {
+        if (record.getDailyKills() != 0) {
             sql.SET("daily_kills = #{dailyKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getDailyWins() != null) {
+        if (record.getDailyWins() != 0) {
             sql.SET("daily_wins = #{dailyWins,jdbcType=VARCHAR}");
         }
         
-        if (record.getDays() != null) {
+        if (record.getDays() != 0) {
             sql.SET("days = #{days,jdbcType=VARCHAR}");
         }
         
-        if (record.getHeadshotKills() != null) {
+        if (record.getHeadshotKills() != 0) {
             sql.SET("headshot_kills = #{headshotKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getHeals() != null) {
+        if (record.getHeals() != 0) {
             sql.SET("heals = #{heals,jdbcType=VARCHAR}");
         }
         
-        if (record.getKills() != null) {
+        if (record.getKills() != 0) {
             sql.SET("kills = #{kills,jdbcType=VARCHAR}");
         }
         
-        if (record.getLongestKill() != null) {
+        if (record.getLongestKill() != 0) {
             sql.SET("longest_kill = #{longestKill,jdbcType=VARCHAR}");
         }
         
-        if (record.getLongestTimeSurvived() != null) {
+        if (record.getLongestTimeSurvived() != 0) {
             sql.SET("longest_time_survived = #{longestTimeSurvived,jdbcType=VARCHAR}");
         }
         
-        if (record.getLosses() != null) {
+        if (record.getLosses() != 0) {
             sql.SET("losses = #{losses,jdbcType=VARCHAR}");
         }
         
-        if (record.getMaxKillStreaks() != null) {
+        if (record.getMaxKillStreaks() != 0) {
             sql.SET("max_kill_streaks = #{maxKillStreaks,jdbcType=VARCHAR}");
         }
         
-        if (record.getMostSurvivalTime() != null) {
+        if (record.getMostSurvivalTime() != 0) {
             sql.SET("most_survival_time = #{mostSurvivalTime,jdbcType=VARCHAR}");
         }
         
-        if (record.getRankPoints() != null) {
+        if (record.getRankPoints() != 0) {
             sql.SET("rank_points = #{rankPoints,jdbcType=VARCHAR}");
         }
         
-        if (record.getRevives() != null) {
+        if (record.getRevives() != 0) {
             sql.SET("revives = #{revives,jdbcType=VARCHAR}");
         }
         
-        if (record.getRideDistance() != null) {
+        if (record.getRideDistance() != 0) {
             sql.SET("ride_distance = #{rideDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoadKills() != null) {
+        if (record.getRoadKills() != 0) {
             sql.SET("road_kills = #{roadKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoundMostKills() != null) {
+        if (record.getRoundMostKills() != 0) {
             sql.SET("round_most_kills = #{roundMostKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getRoundsPlayed() != null) {
+        if (record.getRoundsPlayed() != 0) {
             sql.SET("rounds_played = #{roundsPlayed,jdbcType=VARCHAR}");
         }
         
-        if (record.getSuicides() != null) {
+        if (record.getSuicides() != 0) {
             sql.SET("suicides = #{suicides,jdbcType=VARCHAR}");
         }
         
-        if (record.getSwimDistance() != null) {
+        if (record.getSwimDistance() != 0) {
             sql.SET("swim_distance = #{swimDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getTeamKills() != null) {
+        if (record.getTeamKills() != 0) {
             sql.SET("team_kills = #{teamKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getTimeSurvived() != null) {
+        if (record.getTimeSurvived() != 0) {
             sql.SET("time_survived = #{timeSurvived,jdbcType=VARCHAR}");
         }
         
-        if (record.getTop10s() != null) {
+        if (record.getTop10s() != 0) {
             sql.SET("top10s = #{top10s,jdbcType=VARCHAR}");
         }
         
-        if (record.getVehicleDestroys() != null) {
+        if (record.getVehicleDestroys() != 0) {
             sql.SET("vehicle_destroys = #{vehicleDestroys,jdbcType=VARCHAR}");
         }
         
-        if (record.getWalkDistance() != null) {
+        if (record.getWalkDistance() != 0) {
             sql.SET("walk_distance = #{walkDistance,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeaponsAcquired() != null) {
+        if (record.getWeaponsAcquired() != 0) {
             sql.SET("weapons_acquired = #{weaponsAcquired,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeeklyKills() != null) {
+        if (record.getWeeklyKills() != 0) {
             sql.SET("weekly_kills = #{weeklyKills,jdbcType=VARCHAR}");
         }
         
-        if (record.getWeeklyWins() != null) {
+        if (record.getWeeklyWins() != 0) {
             sql.SET("weekly_wins = #{weeklyWins,jdbcType=VARCHAR}");
         }
         
-        if (record.getWins() != null) {
+        if (record.getWins() != 0) {
             sql.SET("wins = #{wins,jdbcType=VARCHAR}");
         }
         

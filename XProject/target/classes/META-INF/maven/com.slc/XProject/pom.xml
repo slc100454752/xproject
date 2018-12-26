@@ -25,10 +25,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -111,6 +108,19 @@
 				<artifactId>mybatis-annotation-plugins</artifactId>
 				<version>1.4</version>
 			</plugin>
+			<plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-resources-plugin</artifactId>
+                 <configuration>
+                        <encoding>UTF-8</encoding>
+                        <!-- 过滤后缀为pem、pfx的证书文件 -->
+                        <nonFilteredFileExtensions>
+                                <nonFilteredFileExtension>pem</nonFilteredFileExtension>
+                                <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
+                                <nonFilteredFileExtension>p12</nonFilteredFileExtension>
+                        </nonFilteredFileExtensions>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
